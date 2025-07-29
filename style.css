@@ -236,3 +236,26 @@ body {
   #music-button { font-size: 1.4rem; padding: 12px 24px; }
   .candle { bottom: 80px; }
 }
+/* === ГАРАНТИРОВАННО ВЕЗДЕ ШРИФТ ALLURA === */
+.content,
+.content p,
+.content h2,
+.content h3,
+.content span,
+.content div,
+.content strong,
+.content em {
+  font-family: 'Allura', cursive !important;
+  letter-spacing: 0.8px;
+  font-weight: normal;
+}
+
+/* Убедимся, что нет переопределений */
+.page2 .content,
+.page3 .content,
+.page4 .content,
+.page5 .content,
+.page6 .content,
+.page7 .content {
+  font-family: 'Allura', cursive !important;
+}
