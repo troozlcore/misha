@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Свадебное приглашение</title>
+
+  <!-- Подключаем Playfair Display (для читаемости) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Музыка -->
+  <audio id="background-music" src="audio/music.mp3" loop></audio>
+
+  <!-- Кнопка включения музыки -->
+  <div id="music-button">Добро пожаловать в нашку сказку!</div>
+
+  <!-- Анимация падающих звёзд -->
+  <div class="stars" id="stars"></div>
+
+  <!-- Мерцающие свечи -->
+  <div class="candles">
+    <div class="candle left"></div>
+    <div class="candle right"></div>
+  </div>
+
+  <!-- Страницы -->
+  <div class="pages" id="pages">
+    <section class="page page1 active">
+      <div class="content">
+        <h1>Нажми,<br>чтобы войти в сказку</h1>
+      </div>
+    </section>
+
+    <section class="page page2">
+      <div class="content">
+        <h2>Дорогой Михаил!</h2>
+      </div>
+    </section>
+
+    <section class="page page3">
+      <div class="content">
+        <p>Ты важная часть нашей истории,<br>и мы хотим, чтобы ты стал частью<br>ее самого счастливого начала.</p>
+      </div>
+    </section>
+
+    <section class="page page4">
+      <div class="content">
+        <p>С любовью и трепетом приглашаем<br>разделить важный и трепетный день<br>в нашей жизни — день нашей свадьбы.</p>
+      </div>
+    </section>
+
+    <section class="page page5">
+      <div class="content">
+        <div class="details">
+          <h3>27.09.2025</h3>
+          <p>Кафе "Усадьба"</p>
+          <p>17:30</p>
+          <p class="dresscode">Дресс-код: классический стиль<br>с синим аксессуаром на твой вкус.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page page6">
+      <div class="content">
+        <p>Ты только жди,<br>И я вернусь.<br>Как солнца луч,<br>Тебя коснусь.</p>
+      </div>
+    </section>
+
+    <section class="page page7">
+      <div class="content">
+        <p>С любовью,<br>Павел и Мария ♥</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Подключаем скрипт -->
+  <script src="script.js"></script>
+</body>
+</html>
