@@ -22,7 +22,7 @@ body {
 /* === ПОДКЛЮЧАЕМ ТОЛЬКО ALLURA (КАЛИГРАФИЯ) === */
 @font-face {
   font-family: 'Allura';
-  src: url('https://github.com/troozlcore/misha/blob/main/Allura/Allura-regular.ttf') format('truetype');
+  src: url('https://raw.githubusercontent.com/troozlcore/misha/main/Allura/Allura-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
