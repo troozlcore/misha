@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+/* === ЕДИНСТВЕННЫЙ ШРИФТ — ALLURA (КАЛИГРАФИЯ) === */
+@font-face {
+  font-family: 'Allura';
+  src: url('https://raw.githubusercontent.com/troozlcore/misha/main/Allura/Allura-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Основной шрифт — Allura везде */
 body {
   font-family: 'Allura', cursive;
   background-image: url('images/fon.jpg');
@@ -19,12 +28,17 @@ body {
   align-items: center;
 }
 
-/* === ПОДКЛЮЧАЕМ ТОЛЬКО ALLURA (КАЛИГРАФИЯ) === */
-@font-face {
-  font-family: 'Allura';
-  src: url('https://raw.githubusercontent.com/troozlcore/misha/main/Allura/Allura-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+/* === ГАРАНТИРУЕМ ALLURA ДЛЯ ВСЕГО ТЕКСТА === */
+.content,
+.content *,
+.content p,
+.content h2,
+.content h3,
+.content span,
+.content div {
+  font-family: 'Allura', cursive !important;
+  letter-spacing: 0.8px;
+  line-height: 1.7;
 }
 
 /* === ПАДАЮЩИЕ ЗВЁЗДЫ === */
@@ -191,16 +205,14 @@ body {
   z-index: 5;
 }
 
-/* === ТЕКСТ — ВСЕГДА ALLURA (КАЛИГРАФИЯ) === */
+/* === ТЕКСТ — ВСЕГДА ALLURA С АНИМАЦИЕЙ === */
 .content {
   max-width: 85%;
-  font-family: 'Allura', cursive !important;
   font-size: 2.1rem;
   color: #fff;
   text-shadow: 
     0 0 5px rgba(0, 0, 0, 0.5),
     0 0 10px rgba(255, 255, 255, 0.3);
-  line-height: 1.7;
   opacity: 0;
   transform: translateY(30px);
   transition: all 1.2s ease;
@@ -211,19 +223,17 @@ body {
   transform: translateY(0);
 }
 
-/* === Дата — крупнее и торжественнее === */
+/* === Особые размеры === */
 .page5 .content h3 {
   font-size: 3rem;
   margin-bottom: 15px;
-  letter-spacing: 2px;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
 
-/* === Дресс-код и стихи — чуть мельче, но всё равно Allura === */
 .page5 .dresscode,
 .page6 .content,
 .page7 .content {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 
 /* === АДАПТИВ === */
@@ -235,27 +245,4 @@ body {
   .page7 .content { font-size: 1.5rem; }
   #music-button { font-size: 1.4rem; padding: 12px 24px; }
   .candle { bottom: 80px; }
-}
-/* === ГАРАНТИРОВАННО ВЕЗДЕ ШРИФТ ALLURA === */
-.content,
-.content p,
-.content h2,
-.content h3,
-.content span,
-.content div,
-.content strong,
-.content em {
-  font-family: 'Allura', cursive !important;
-  letter-spacing: 0.8px;
-  font-weight: normal;
-}
-
-/* Убедимся, что нет переопределений */
-.page2 .content,
-.page3 .content,
-.page4 .content,
-.page5 .content,
-.page6 .content,
-.page7 .content {
-  font-family: 'Allura', cursive !important;
 }
