@@ -5,17 +5,13 @@
   box-sizing: border-box;
 }
 
-/* === ЕДИНСТВЕННЫЙ ШРИФТ — ALLURA (КАЛИГРАФИЯ) === */
-@font-face {
-  font-family: 'Allura';
-  src: url('https://raw.githubusercontent.com/troozlcore/misha/main/Allura/Allura-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+/* === ПОДКЛЮЧАЕМ ШРИФТ С КИРИЛЛИЦЕЙ: Great Vibes (аналог Allura) === */
+/* Вставьте в <head> HTML: */
+/* <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&subset=cyrillic&display=swap" rel="stylesheet"> */
 
-/* Основной шрифт — Allura везде */
+/* Основной шрифт — каллиграфический, поддерживает русский */
 body {
-  font-family: 'Allura', cursive;
+  font-family: 'Great Vibes', cursive;
   background-image: url('images/fon.jpg');
   background-size: cover;
   background-position: center;
@@ -28,7 +24,7 @@ body {
   align-items: center;
 }
 
-/* === ГАРАНТИРУЕМ ALLURA ДЛЯ ВСЕГО ТЕКСТА === */
+/* === ГАРАНТИРУЕМ ЕДИНЫЙ ШРИФТ ДЛЯ ВСЕГО ТЕКСТА === */
 .content,
 .content *,
 .content p,
@@ -36,7 +32,7 @@ body {
 .content h3,
 .content span,
 .content div {
-  font-family: 'Allura', cursive !important;
+  font-family: 'Great Vibes', cursive !important;
   letter-spacing: 0.8px;
   line-height: 1.7;
 }
@@ -162,7 +158,7 @@ body {
   border: 2px solid #fff;
   border-radius: 30px;
   color: #fff;
-  font-family: 'Allura', cursive;
+  font-family: 'Great Vibes', cursive;
   font-size: 1.7rem;
   cursor: pointer;
   z-index: 100;
@@ -205,7 +201,7 @@ body {
   z-index: 5;
 }
 
-/* === ТЕКСТ — ВСЕГДА ALLURA С АНИМАЦИЕЙ === */
+/* === ТЕКСТ С АНИМАЦИЕЙ ПОЯВЛЕНИЯ === */
 .content {
   max-width: 85%;
   font-size: 2.1rem;
@@ -223,7 +219,7 @@ body {
   transform: translateY(0);
 }
 
-/* === Особые размеры === */
+/* === ОСОБЫЕ РАЗМЕРЫ ТЕКСТА === */
 .page5 .content h3 {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -236,13 +232,28 @@ body {
   font-size: 1.8rem;
 }
 
-/* === АДАПТИВ === */
+/* === АДАПТИВ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ === */
 @media (max-width: 768px) {
-  .content { font-size: 1.6rem; }
-  .page5 .content h3 { font-size: 2.4rem; }
+  .content {
+    font-size: 1.6rem;
+  }
+
+  .page5 .content h3 {
+    font-size: 2.4rem;
+  }
+
   .page5 .dresscode,
   .page6 .content,
-  .page7 .content { font-size: 1.5rem; }
-  #music-button { font-size: 1.4rem; padding: 12px 24px; }
-  .candle { bottom: 80px; }
+  .page7 .content {
+    font-size: 1.5rem;
+  }
+
+  #music-button {
+    font-size: 1.4rem;
+    padding: 12px 24px;
+  }
+
+  .candle {
+    bottom: 80px;
+  }
 }
